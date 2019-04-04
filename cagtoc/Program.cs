@@ -30,7 +30,7 @@ namespace cagtoc
 
 			using (StreamWriter tocFileStream = new StreamWriter(tocFile))
 			{
-				foreach (string sourceFile in Directory.EnumerateFiles(sourceDir, "*.*", SearchOption.AllDirectories))
+				foreach (string sourceFile in Directory.EnumerateFiles(sourceDir, "*.md", SearchOption.AllDirectories))
 				{
 					var fileName = Path.GetFileName(sourceFile);
 					var relativeFile = Path.GetRelativePath(sourceDir, sourceFile);
