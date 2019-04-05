@@ -7,15 +7,15 @@ namespace cagtoc
 	{
 		static void Main(string[] args)
 		{
-			var isDebugging = false;
+			var isDebugging = true;
 
 			try
 			{
 				if (args.Length == 2 || isDebugging == true)
 				{
 
-					var sourceDir = (isDebugging) ? "..\\input" : args[0];
-					var targetDir = (isDebugging) ? "..\\output" : args[1];
+					var sourceDir = (isDebugging) ? "../input" : args[0];
+					var targetDir = (isDebugging) ? "../output" : args[1];
 
 					var myFileUtil = new FileUtil(sourceDir, targetDir);
 					myFileUtil.WalkPath();
