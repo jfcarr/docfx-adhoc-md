@@ -9,10 +9,22 @@ namespace cagtoc
 		{
 			try
 			{
-				var sourceDir = "..\\input";
-				var targetDir = "..\\output";
+				if (args.Length == 2)
+				{
 
-				WalkPath(sourceDir, targetDir);
+					/* -- debugging
+					var sourceDir = "..\\input";
+					var targetDir = "..\\output";
+					*/
+
+					var sourceDir = args[0];
+					var targetDir = args[1];
+
+					WalkPath(sourceDir, targetDir);
+				} else {
+					Console.WriteLine ("USAGE:");
+					Console.WriteLine("\tcagtoc {source directory} {target directory}");
+				}
 			}
 			catch (Exception ex)
 			{
