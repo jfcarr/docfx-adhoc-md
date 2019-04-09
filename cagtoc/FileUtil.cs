@@ -40,9 +40,9 @@ namespace cagtoc
 					}
 
 					// Heading entry:
-					tocFileStream.WriteLine((string.IsNullOrEmpty(fileModel.SourceDirName)) ? $"- {fileModel.SourceFileName}" : $"- {fileModel.SourceFileName} in {fileModel.SourceDirName}");
+					tocFileStream.WriteLine((string.IsNullOrEmpty(fileModel.SourceDirName)) ? $"- name: {fileModel.SourceFileName}" : $"- name: {fileModel.SourceFileName} in {fileModel.SourceDirName}");
 					// Path entry:
-					tocFileStream.WriteLine($"  {fileModel.SourceRelativeFile}");
+					tocFileStream.WriteLine($"  href: {fileModel.SourceRelativeFile}");
 				}
 			}
 		}
